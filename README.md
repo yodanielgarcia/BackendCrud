@@ -33,3 +33,12 @@ auth: ADMIN
    "fechaSalida":
    } <br>
    headers: auth, authorization <br>
+4. Update
+   {
+   "Id": 1,
+   "nombre": "sadasdasd",
+   "apellido": "Diaz",
+   "direccion": "calle 123",
+   "telefono": 355478896,
+   "edad": 33
+   }

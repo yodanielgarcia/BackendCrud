@@ -2,13 +2,13 @@ const sql = require("../datebase");
 //POST insert
 exports.createPerson = (req, res) => {
   var user = {
-    nombre: req.body.Name,
-    apellido: req.body.Age,
-    direccion: req.body.profession,
-    telefono: req.body.Email,
-    edad: req.body.phone,
-    fechaContrato: req.body.phone,
-    fechaSalida: req.body.phone,
+    nombre: req.body.nombre,
+    apellido: req.body.apellido,
+    direccion: req.body.direccion,
+    telefono: req.body.telefono,
+    edad: req.body.edad,
+    fechaContrato: req.body.fechaContrato,
+    fechaSalida: req.body.fechaSalida,
   };
   sql.query("INSERT INTO usuarios SET ?", user, (err, data) => {
     if (err) {
@@ -29,6 +29,7 @@ exports.createPerson = (req, res) => {
 //PUT- Modificar
 exports.updatePerson = (req, res) => {
   var condition = { Id: req.body.Id };
+  console.log(condition);
   sql.query(
     "update usuarios SET ? WHERE ?",
     [req.body, condition],
